@@ -1,0 +1,210 @@
+/* Font Define */
+@font-face {
+    font-family: "Young-Serif";
+    src: url(./../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: "Outfit";
+    src: url(./../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+/* end of Font Define*/
+
+/* Variable */
+:root{
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+    --young-serif: "Young-Serif";
+    --outfit: "Outfit";
+}
+/* end of Variable */
+
+body{
+    padding-top: 125px;
+    padding-bottom: 125px;
+    background-color: var(--eggshell);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+section.hero--section img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.container{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.pb--not {
+    padding-bottom: 0;
+}
+
+:where(.instructions, .ingredients ){
+    border-bottom: 1px solid var(--light-grey);
+}
+
+h1{
+    font-family: var(--young-serif);
+    font-size: 32px;
+    letter-spacing: 2;
+    line-height: 1.5;
+    color: var(--dark-charcoal);
+}
+
+h2{
+    font-family: var(--young-serif);
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--nutmeg);
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-family: var(--outfit);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--dark-raspberry);
+}
+
+p{
+    font-family: var(--outfit);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--wenge-brown);
+}
+
+.preparation-time-container {
+   background: var(--rose-white);
+    padding: 16px 32px;
+    border-radius: 10px;
+}
+
+.preparation-time-container h3 {
+  margin-bottom: 8px;
+}
+
+ul {
+  margin-left: 16px;
+}
+
+:where(.ingredients, .preparation-time-container) ul li::marker, ol li::marker{
+    color: var(--dark-raspberry);
+    font-weight: bold;
+}
+
+:where(ul, ol) li {
+    font-family: var(--outfit);
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 24px;
+    color: var(--wenge-brown);
+}
+
+.ingredients ul, ol {
+    margin-left: 24px;
+}
+
+.instructions ol li{
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    font-family: var(--outfit);
+    padding-top: 24px;
+}
+
+table tr {
+    font-family: var(--outfit);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+table tr td:first-child{
+    color: var(--wenge-brown);
+}
+
+table tr td:last-child{
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+
+tr td {
+    padding: 16px 32px;
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+#values {
+  border: none;
+  height: 1px;
+  background: #E3DDD7;
+}
+
+/* Mobile Device */
+@media(max-width: 500px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    section.hero--section img{
+        border-radius: 0;
+    }
+
+    section.content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+        line-height: 1.25;
+        margin-bottom: 1.25rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    ul {
+        margin-left: 2.15rem;
+    }
+
+    :where(ul, ol) li {
+        padding-left: 1.08rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
